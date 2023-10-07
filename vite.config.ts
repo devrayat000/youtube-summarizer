@@ -23,12 +23,12 @@ const manifest: ManifestV3Export = {
     service_worker: "src/background.ts",
     type: "module",
   },
-  content_scripts: [
-    {
-      js: ["src/content.tsx"],
-      matches: ["https://*.youtube.com/*"],
-    },
-  ],
+  // content_scripts: [
+  //   {
+  //     js: ["src/content.tsx"],
+  //     matches: ["https://*.youtube.com/*"],
+  //   },
+  // ],
 };
 
 // https://vitejs.dev/config/

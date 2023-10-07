@@ -24,31 +24,5 @@
   "background": {
     "service_worker": "service-worker-loader.js",
     "type": "module"
-  },
-  "content_scripts": [
-    {
-      "js": [
-        "assets/content-script-loader.content.tsx-4897c21e-039ba556.js"
-      ],
-      "matches": [
-        "https://*.youtube.com/*"
-      ],
-      "css": [
-        "assets/index-84b3dc58.css"
-      ]
-    }
-  ],
-  "web_accessible_resources": [
-    {
-      "matches": [
-        "https://*.youtube.com/*"
-      ],
-      "resources": [
-        "assets/logo-f5748f3f.png",
-        "assets/index-429a9ab2.js",
-        "assets/content.tsx-4897c21e.js"
-      ],
-      "use_dynamic_url": true
-    }
-  ]
+  }
 }

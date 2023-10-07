@@ -7,7 +7,10 @@ function App() {
   return (
     <div>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
+        <a
+          href="https://github.com/devrayat000/youtube-summarizer"
+          target="_blank"
+        >
           <img
             src={chrome.runtime.getURL(sumTubeLogo)}
             className="logo"
