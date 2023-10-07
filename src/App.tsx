@@ -97,10 +97,6 @@ function SummarizeTranscript({ url }: { url: string }) {
     return () => chrome.runtime.onMessage.removeListener(getBackChunk);
   }, [getBackChunk]);
 
-  if (loading && !response) {
-    return <div>Loading...</div>;
-  }
-
   if (error) {
     return <div>{error}</div>;
   }
@@ -108,12 +104,13 @@ function SummarizeTranscript({ url }: { url: string }) {
   return (
     <div className="card">
       <div>
-        <button type="button" onClick={fetchSummary} disabled={loading}>
-          Summarize Video
-        </button>
-      </div>
-      <div>
-        <p>{response.replace(/<\/?s>/g, "")}</p>
+        {!response ? (
+          <button type="button" onClick={fetchSummary} disabled={loading}>
+            {loading ? "Loading..." : "Summarize Video"}
+          </button>
+        ) : (
+          <p>{response.replace(/<\/?s>/g, "")}</p>
+        )}
       </div>
     </div>
   );
