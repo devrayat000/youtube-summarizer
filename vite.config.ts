@@ -18,7 +18,7 @@ const manifest: ManifestV3Export = {
     "128": "src/assets/icons/icon128.png",
   },
   // and the api host
-  host_permissions: ["<https://devrayat000-youtube-summarizer.hf.space/*>"],
+  host_permissions: ["*://devrayat000-youtube-summarizer.hf.space/*"],
   background: {
     service_worker: "src/background.ts",
     type: "module",

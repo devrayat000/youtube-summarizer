@@ -31,7 +31,7 @@ function ShowURL() {
   const { data: tabs } = useSWR(
     ["url"],
     () =>
-      chrome.tabs.query({
+      chrome.tabs?.query({
         active: true,
         lastFocusedWindow: true,
         // currentWindow: true,
