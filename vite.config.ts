@@ -34,4 +34,7 @@ const manifest: ManifestV3Export = {
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), crx({ manifest })],
+  build: {
+    outDir: "package",
+  },
 });

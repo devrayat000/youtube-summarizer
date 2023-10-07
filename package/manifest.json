@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "SumTube",
+  "description": "Summarize YouTube videos in one click",
+  "author": "Zul Ikram Musaddik Rayat",
+  "offline_enabled": true,
+  "version": "1.0.0",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ],
+  "icons": {
+    "16": "src/assets/icons/icon16.png",
+    "32": "src/assets/icons/icon32.png",
+    "48": "src/assets/icons/icon48.png",
+    "128": "src/assets/icons/icon128.png"
+  },
+  "host_permissions": [
+    "*://devrayat000-youtube-summarizer.hf.space/*"
+  ],
+  "background": {
+    "service_worker": "service-worker-loader.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "assets/content-script-loader.content.tsx-4897c21e-039ba556.js"
+      ],
+      "matches": [
+        "https://*.youtube.com/*"
+      ],
+      "css": [
+        "assets/index-84b3dc58.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "https://*.youtube.com/*"
+      ],
+      "resources": [
+        "assets/logo-f5748f3f.png",
+        "assets/index-429a9ab2.js",
+        "assets/content.tsx-4897c21e.js"
+      ],
+      "use_dynamic_url": true
+    }
+  ]
+}
